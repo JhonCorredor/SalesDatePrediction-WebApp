@@ -2,29 +2,45 @@
 
 ## Descripción
 
-Este proyecto es una aplicación desarrollada con Angular 17. El propósito del proyecto es demostrar conocimientos en angular 17 para una prueba tecnica.
+`SalesDatePrediction-WebApp` es la aplicación frontend desarrollada con Angular para visualizar y gestionar las predicciones de fechas de venta. Esta aplicación se comunica con la API backend desarrollada en .NET Core, permitiendo a los usuarios interactuar con los datos predictivos de manera eficiente.
 
 ## Estructura del Proyecto
 
-El proyecto sigue la estructura típica de un proyecto Angular, con los siguientes directorios y archivos principales:
+La estructura principal del proyecto Angular es la siguiente:
 
-- **src/**: Contiene el código fuente de la aplicación.
-  - **app/**: Directorio principal de la aplicación, que contiene los componentes, servicios, y módulos.
-  - **assets/**: Recursos estáticos como imágenes, fuentes, etc.
-  - **environments/**: Archivos de configuración para diferentes entornos (desarrollo, producción, etc.).
-- **angular.json**: Archivo de configuración del proyecto Angular.
-- **package.json**: Define las dependencias del proyecto y scripts de npm.
-- **tsconfig.json**: Archivo de configuración para TypeScript.
+- **.angular/**: Contiene archivos y configuraciones específicas del framework Angular.
+- **.vs/**: Directorio que almacena configuraciones específicas de Visual Studio.
+- **node_modules/**: Carpeta donde se almacenan todos los módulos y dependencias de Node.js instalados.
+- **src/**: Directorio principal del código fuente de la aplicación.
+- **.gitignore**: Archivo que especifica qué archivos y directorios deben ser ignorados por Git.
+- **angular.json**: Archivo de configuración principal de Angular CLI que gestiona las configuraciones de compilación, testeo, y demás.
+- **package.json**: Archivo de configuración para npm que gestiona las dependencias y scripts de la aplicación.
+
+## Requisitos Previos
+
+Antes de poner en marcha el proyecto, asegúrate de tener instalado:
+
+- [Node.js](https://nodejs.org/) (Versión 18 o superior recomendada)
+- [Angular CLI](https://angular.io/cli)
 
 ## Instalación
 
-Sigue estos pasos para instalar y ejecutar el proyecto localmente:
+Para configurar el proyecto localmente, sigue estos pasos:
 
 1. **Clonar el repositorio:**
    ```bash
    git clone https://github.com/JhonCorredor/SalesDatePrediction-WebApp.git
    cd SalesDatePrediction-WebApp
-   npm install
-   ng serve --open
    ```
-   Nota "Tener en cuenta, que debe estar corriendo el proecto SalesDatePrediction-WebAPI"
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
+3. **Configurar las variables de entorno:**
+   ```bash
+   API_BASE_URL=http://localhost:44332
+   ```
+4. **Ejecución del proyecto:**
+   ```bash
+   ng serve
+   ```
