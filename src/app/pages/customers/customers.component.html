@@ -1,0 +1,22 @@
+<form [formGroup]="frmSearch">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 ">
+            <h2>Customers</h2>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 text-end">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control border-0 border-bottom" placeholder="Customer Name"
+                    aria-describedby="button" formControlName="CustomerName" (change)="onChangeInput()">
+                <button class="btn border-bottom text-secondary" type="button" id="button"
+                    (click)="onClickSearchCustomerName()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="btn border-bottom text-secondary" type="button" (click)="onClickCleanList()"><i class="fa-solid fa-broom-wide"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 table-responsive">
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table w-100 vh-100"></table>
+            <app-botones #botonesDatatable [botones]="tableBotones" [dropdown]="true" [hidden]="true"></app-botones>
+        </div>
+    </div>
+</form>

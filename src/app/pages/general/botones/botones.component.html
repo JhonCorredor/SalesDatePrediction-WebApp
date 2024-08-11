@@ -1,0 +1,14 @@
+<div *ngIf="!dropdown; else isDropdown">
+  <div #botonesNormal class="button-group">
+    <button class="btn mx-1 text-danger float-right" *ngIf="validateIfExists('btn-cancel')" (click)="eventCancel.emit()">CLOSE</button>
+    <button class="btn mx-1 text-success float-right" *ngIf="validateIfExists('btn-save')" (click)="eventSave.emit()">SAVE</button>
+
+  </div>
+</div>
+
+<ng-template #isDropdown>
+  <div #botonesDropdown class="d-flex justify-content-center align-items-center">
+    <button type="button" title="VIEW ORDERS" class="btn btn-sm text-danger btn-dropdown-view-orders" data-id="$id" *ngIf="validateIfExists('btn-view-orders')">VIEW ORDERS</button>
+    <button type="button" title="NEW ORDER" class="btn btn-sm text-success btn-dropdown-new-order" data-id="$id" *ngIf="validateIfExists('btn-new-order')">NEW ORDER</button>
+  </div>
+</ng-template>

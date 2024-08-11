@@ -1,0 +1,26 @@
+<section>
+    <div>
+        <div class="border shadow-lg">
+            <div class="modal-header bg-primary">
+                <h5 class="text-white">{{ title }}</h5>
+            </div>
+            <div class="modal-body">
+                <div class="dt-responsive">
+                    <div class="row">
+                        <div class="col-md-12 table-responsive">
+                            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+                                class="table w-100"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row float-right">
+                    <div class="col-md-12">
+                        <app-botones [botones]="botones" (eventCancel)="cancel()"></app-botones>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

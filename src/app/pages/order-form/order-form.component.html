@@ -1,0 +1,132 @@
+<section>
+    <div>
+        <form [formGroup]="frmOrder" class="border shadow-lg">
+            <div class="modal-header bg-success">
+                <h5 class="text-white">{{ title }}</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <label>Employee *</label>
+                        <ng-select [items]="listEmployee" bindLabel="fullName" bindValue="empId"
+                            formControlName="EmpId">
+                        </ng-select>
+                        <app-forms-messages [error]="frmOrder.get('EmpId')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <label>Shipper *</label>
+                        <ng-select [items]="listShipper" bindLabel="companyName" bindValue="shipperId"
+                            formControlName="ShipperId">
+                        </ng-select>
+                        <app-forms-messages [error]="frmOrder.get('ShipperId')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label>Ship Name *</label>
+                        <input type="text" class="form-control" formControlName="ShipName">
+                        <app-forms-messages [error]="frmOrder.get('ShipName')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <label>Ship Address *</label>
+                        <input type="text" class="form-control" formControlName="ShipAddress">
+                        <app-forms-messages [error]="frmOrder.get('ShipAddress')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <label>Ship City *</label>
+                        <input type="text" class="form-control" formControlName="ShipCity">
+                        <app-forms-messages [error]="frmOrder.get('ShipCity')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <label>ShipCountry *</label>
+                        <input type="text" class="form-control" formControlName="ShipCountry">
+                        <app-forms-messages [error]="frmOrder.get('ShipCountry')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <label>Order Date *</label>
+                        <input type="datetime-local" class="form-control" formControlName="OrderDate">
+                        <app-forms-messages [error]="frmOrder.get('OrderDate')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <label>Required Date *</label>
+                        <input type="datetime-local" class="form-control" formControlName="RequiredDate">
+                        <app-forms-messages [error]="frmOrder.get('RequiredDate')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <label>Shipped Date *</label>
+                        <input type="datetime-local" class="form-control" formControlName="ShippedDate">
+                        <app-forms-messages [error]="frmOrder.get('ShippedDate')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label>$ Freight *</label>
+                        <input type="number" class="form-control" formControlName="Freight">
+                        <app-forms-messages [error]="frmOrder.get('Freight')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                </div>
+                <br>
+                <div class="row border-top">
+                    <h6 class="mt-3">Order Deails</h6>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label>Product *</label>
+                        <ng-select [items]="listProduct" bindLabel="productName" bindValue="productId"
+                            formControlName="ProductId">
+                        </ng-select>
+                        <app-forms-messages [error]="frmOrder.get('ProductId')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <label>$ Unit Price *</label>
+                        <input type="number" class="form-control" formControlName="UnitPrice">
+                        <app-forms-messages [error]="frmOrder.get('UnitPrice')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <label>Quantity *</label>
+                        <input type="number" class="form-control" formControlName="Qty">
+                        <app-forms-messages [error]="frmOrder.get('Qty')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <label>Discount *</label>
+                        <input type="number" class="form-control" formControlName="Discount">
+                        <app-forms-messages [error]="frmOrder.get('Discount')" [statusForm]=statusForm
+                            [statusForm]=statusForm></app-forms-messages>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row float-right">
+                    <div class="col-md-12">
+                        <app-botones [botones]="botones" (eventCancel)="cancel()" (eventSave)="save()"></app-botones>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
